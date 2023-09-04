@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/ryouran-festival/static/css/main.e6c13ad2.css",
-    "main.js": "/ryouran-festival/static/js/main.4c28d5b7.js",
+    "main.js": "/ryouran-festival/static/js/main.bb4d0c1c.js",
     "static/js/787.1fb9d9cc.chunk.js": "/ryouran-festival/static/js/787.1fb9d9cc.chunk.js",
+    "static/media/Ryouran-festival_top.png": "/ryouran-festival/static/media/Ryouran-festival_top.14ed2d9afe973d7de333.png",
     "index.html": "/ryouran-festival/index.html",
     "main.e6c13ad2.css.map": "/ryouran-festival/static/css/main.e6c13ad2.css.map",
-    "main.4c28d5b7.js.map": "/ryouran-festival/static/js/main.4c28d5b7.js.map",
+    "main.bb4d0c1c.js.map": "/ryouran-festival/static/js/main.bb4d0c1c.js.map",
     "787.1fb9d9cc.chunk.js.map": "/ryouran-festival/static/js/787.1fb9d9cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.4c28d5b7.js"
+    "static/js/main.bb4d0c1c.js"
   ]
 }
