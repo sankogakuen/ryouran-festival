@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography';
-import DeviceTypeDetector from './DeviceTypeDetector';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
+        position: "fixed",
         background: "#FFFEF3",
         height: "18h",
         boxShadow: '0px 2px 4px rgba(255, 206, 132, 1)', // 影の色を赤に変更
-        display: 'flex',
-        alignContent: 'center',
     },
     customButtonForPC: {
         fontSize: '20px',
@@ -22,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto',
     },
 }));
-
 
 const Navbar: React.FC = () => {
     const classes = useStyles();
@@ -53,14 +51,22 @@ const Navbar: React.FC = () => {
 
                     <Typography>
                         <Button className={isMobile ? classes.customButtonForMobile : classes.customButtonForPC}>
-                            ABOUT
+                            about
                         </Button>
+
                         <Button className={isMobile ? classes.customButtonForMobile : classes.customButtonForPC}>
                             Home
                         </Button>
-                        <Button className={isMobile ? classes.customButtonForMobile : classes.customButtonForPC}>
-                            CONTACT
-                        </Button>
+
+                        <AnchorLink href='#access' style={{
+                            textDecoration: 'none',
+                            color: 'inherit'
+                        }}>
+                            <Button className={isMobile ? classes.customButtonForMobile : classes.customButtonForPC}>
+                                Access
+                            </Button>
+                        </AnchorLink>
+
                     </Typography>
                 </Toolbar>
             </AppBar >
