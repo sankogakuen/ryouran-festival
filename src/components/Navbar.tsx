@@ -8,6 +8,7 @@ import DeviceTypeDetector from './DeviceTypeDetector';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
+        background: "#FFFEF3",
         height: "18h",
         boxShadow: '0px 2px 4px rgba(255, 206, 132, 1)', // 影の色を赤に変更
         display: 'flex',
