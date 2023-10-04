@@ -4,7 +4,7 @@ import Home from './pages/Home/Home'
 
 const App: React.FC = () => {
     const bodyStyle = {
-        backgroundColor: '#FFFEF3', /* 任意の背景色を設定 */
+        backgroundColor: '#FFFEF3',/* 任意の背景色を設定 */
     };
     return (
         <div style={bodyStyle}>
