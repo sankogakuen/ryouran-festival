@@ -6,7 +6,7 @@ import HoverUnderlineLink from "../../components/HoverUnderlineLink";
 const Access: React.FC = () => {
   return (
     <Page>
-      <HoverUnderlineLink sectionId="access">ACCESS</HoverUnderlineLink>
+      <HoverUnderlineLink>ACCESS</HoverUnderlineLink>
       <GoogleMap />
     </Page>
   );

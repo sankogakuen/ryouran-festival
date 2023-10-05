@@ -8,7 +8,7 @@ const ThemeSong: React.FC = () => {
   return (
     <>
       <Page>
-        <HoverUnderlineLink sectionId="Theme song">
+        <HoverUnderlineLink>
           <HoverableElement bellowContent={"キャラクター(緑黄色社会)"}>
             Theme song
           </HoverableElement>

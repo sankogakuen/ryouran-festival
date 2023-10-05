@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar: React.FC = () => {
   const classes = useStyles();
-
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 
   useEffect(() => {
@@ -52,16 +51,24 @@ const Navbar: React.FC = () => {
             >
               about
             </Button>
-
-            <Button
-              className={
-                isMobile
-                  ? classes.customButtonForMobile
-                  : classes.customButtonForPC
-              }
+            <AnchorLink
+              href="#home"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
+              offset={() => window.innerHeight / 2 - window.innerHeight / 4}
             >
-              Home
-            </Button>
+              <Button
+                className={
+                  isMobile
+                    ? classes.customButtonForMobile
+                    : classes.customButtonForPC
+                }
+              >
+                Home
+              </Button>
+            </AnchorLink>
 
             <AnchorLink
               href="#access"

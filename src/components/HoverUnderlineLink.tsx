@@ -29,17 +29,14 @@ const useStyles = makeStyles({
 
 interface children {
   children: React.ReactNode;
-  sectionId: string;
 }
 
-const HoverUnderlineLink: React.FC<children> = ({ children, sectionId }) => {
+const HoverUnderlineLink: React.FC<children> = ({ children }) => {
   const classes = useStyles();
 
   return (
     <Container>
-      <section id={sectionId}>
-        <h1 className={classes.link}>{children}</h1>
-      </section>
+      <h1 className={classes.link}>{children}</h1>
     </Container>
   );
 };

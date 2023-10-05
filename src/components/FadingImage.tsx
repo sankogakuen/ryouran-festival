@@ -3,8 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   image: {
-    width: "80%", // 画像の幅を100%に設定
-    height: "auto", // 高さは自動調整
+    width: "80%", // 画像の幅を100%に設定 height: "auto", // 高さは自動調整
     opacity: 0,
     transition: "opacity 2s ease-in", // 画像が現れるスピードを調整
   },
@@ -57,4 +56,3 @@ const FadeInImage: React.FC<FadeInImageProps> = ({ src, alt }) => {
 };
 
 export default FadeInImage;
-

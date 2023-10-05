@@ -9,9 +9,13 @@ import ThemeSong from "./ThemeSong";
 const Home: React.FC = () => {
   return (
     <>
-      <FadeInImage src={Top_title_img} alt="sanko festival" />
+      <section id="home">
+        <FadeInImage src={Top_title_img} alt="sanko festival" />
+      </section>
+
       <ThemeSong />
       <Access />
+      <section id="access" />
       <ScrollUp />
     </>
   );
