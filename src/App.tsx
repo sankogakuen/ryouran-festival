@@ -1,7 +1,8 @@
 import React from "react";
 import "animate.css";
-import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home/Home";
+import Navbar from "./components/Navbar";
 
 const App: React.FC = () => {
   const bodyStyle = {
