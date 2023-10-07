@@ -16,7 +16,7 @@ const Page: React.FC<Page> = ({ children }) => {
   };
 
   const item: React.CSSProperties = {
-    width: "70%", // 幅を60%に設定
+    width: "80%", // 幅を60%に設定
   };
 
   const { ref, inView } = useInView({
