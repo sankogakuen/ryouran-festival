@@ -65,27 +65,26 @@ const Message: React.FC = () => {
 
   return (
     <>
-      <section id="about">
-        <Page>
-          <HoverUnderlineLink>Works</HoverUnderlineLink>
-          {isMobile ? (
-            <>
-              <div style={mobileImgContainer}></div>
-              <SlideInInfo>{formattedText}</SlideInInfo>
-            </>
-          ) : (
-            <Grid container spacing={2}>
-              <Grid style={textBoxStyle} item>
-                <Paragraph>{formattedText}</Paragraph>
-              </Grid>
-
-              <Grid item xs={6}>
-                <div style={mobileImgContainer}>img</div>
-              </Grid>
+      <section id="about" />
+      <Page>
+        <HoverUnderlineLink>Works</HoverUnderlineLink>
+        {isMobile ? (
+          <>
+            <div style={mobileImgContainer}></div>
+            <SlideInInfo>{formattedText}</SlideInInfo>
+          </>
+        ) : (
+          <Grid container spacing={2}>
+            <Grid style={textBoxStyle} item>
+              <Paragraph>{formattedText}</Paragraph>
             </Grid>
-          )}
-        </Page>
-      </section>
+
+            <Grid item xs={6}>
+              <div style={mobileImgContainer}>img</div>
+            </Grid>
+          </Grid>
+        )}
+      </Page>
     </>
   );
 };

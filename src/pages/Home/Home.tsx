@@ -6,6 +6,7 @@ import FadeInImage from "../../components/FadingImage";
 import Message from "./Message";
 import ThemeSong from "./ThemeSong";
 import Access from "./Access";
+import Links from "./Links";
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <Message />
       <ThemeSong />
       <Access />
+      <Links />
       <ScrollUp />
     </>
   );

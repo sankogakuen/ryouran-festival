@@ -5,7 +5,11 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { AiOutlineHome, AiOutlineCamera } from "react-icons/ai";
+import {
+  AiOutlineHome,
+  AiOutlineCamera,
+  AiOutlineExport,
+} from "react-icons/ai";
 import { BiMap } from "react-icons/bi";
 
 const useStyles = makeStyles((theme) => ({
@@ -44,6 +48,25 @@ const Navbar: React.FC = () => {
       <AppBar color="default" position="static" className={classes.appBar}>
         <Toolbar style={{ justifyContent: "center" }}>
           <Typography>
+            <AnchorLink
+              href="#links"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
+              offset={() => window.innerHeight / 2 - window.innerHeight / 4}
+            >
+              <Button
+                className={
+                  isMobile
+                    ? classes.customButtonForMobile
+                    : classes.customButtonForPC
+                }
+              >
+                <AiOutlineExport />
+              </Button>
+            </AnchorLink>
+
             <AnchorLink
               href="#about"
               style={{
