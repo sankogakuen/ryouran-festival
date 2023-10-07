@@ -74,7 +74,7 @@ const Message: React.FC = () => {
               <SlideInInfo>{formattedText}</SlideInInfo>
             </>
           ) : (
-            <Grid>
+            <Grid container spacing={2}>
               <Grid style={textBoxStyle} item>
                 <Paragraph>{formattedText}</Paragraph>
               </Grid>
