@@ -5,22 +5,14 @@ import Page from "../../components/Page";
 import Paragraph from "../../components/paragraph";
 import SlideInInfo from "../../components/SlideInInfo";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
 const Message: React.FC = () => {
   const textBoxStyle = {
     width: "50%",
     height: "50%",
+  };
+
+  const pcH1 = {
+    fontSize: "20px",
   };
 
   const mobileImgContainer = {
@@ -29,12 +21,11 @@ const Message: React.FC = () => {
     background: "#f0f0f0",
   };
 
-  const [open, setOpen] = useState(false);
+  const mobileH1 = {
+    fontSize: "10px",
+  };
+
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -67,22 +58,31 @@ const Message: React.FC = () => {
     <>
       <section id="about" />
       <Page>
-        <HoverUnderlineLink>Works</HoverUnderlineLink>
         {isMobile ? (
           <>
+            <div style={mobileH1}>
+              <HoverUnderlineLink>Works</HoverUnderlineLink>
+            </div>
             <div style={mobileImgContainer}></div>
             <SlideInInfo>{formattedText}</SlideInInfo>
           </>
         ) : (
-          <Grid container spacing={2}>
-            <Grid style={textBoxStyle} item>
-              <Paragraph>{formattedText}</Paragraph>
-            </Grid>
+          <>
+            <div style={pcH1}>
+              <HoverUnderlineLink>
+                百花繚乱～みんなの個性咲き誇れ～
+              </HoverUnderlineLink>
+            </div>
+            <Grid container spacing={2}>
+              <Grid style={textBoxStyle} item>
+                <Paragraph>{formattedText}</Paragraph>
+              </Grid>
 
-            <Grid item xs={6}>
-              <div style={mobileImgContainer}>img</div>
+              <Grid item xs={6}>
+                <div style={mobileImgContainer}>img</div>
+              </Grid>
             </Grid>
-          </Grid>
+          </>
         )}
       </Page>
     </>

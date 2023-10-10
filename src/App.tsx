@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "animate.css";
 
 import Home from "./pages/Home/Home";
@@ -10,10 +11,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div style={bodyStyle}>
-      <Navbar />
-      <Home />
-    </div>
+    <Router>
+      <div style={bodyStyle}>
+        <Navbar />
+        <Home />
+      </div>
+    </Router>
   );
 };
 

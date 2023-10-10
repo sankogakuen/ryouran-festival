@@ -7,10 +7,11 @@ const Access: React.FC = () => {
   return (
     <>
       <Page>
-        <HoverUnderlineLink>ACCESS</HoverUnderlineLink>
-        <GoogleMap />
+        <section id="access">
+          <HoverUnderlineLink>ACCESS</HoverUnderlineLink>
+          <GoogleMap />
+        </section>
       </Page>
-      <section id="access" />
     </>
   );
 };

@@ -50,6 +50,15 @@ const FadeInImage: React.FC<FadeInImageProps> = ({ src, alt }) => {
         className={`${classes.image} ${visible ? classes.visible : ""}`}
       >
         <img src={src} alt={alt} style={{ width: "100%" }} />
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          <h1>百花繚乱～みんなの個性咲き誇れ～</h1>
+        </div>
       </div>
     </div>
   );
