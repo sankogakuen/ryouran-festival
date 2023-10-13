@@ -6,11 +6,10 @@ import HoverUnderlineLink from "../../components/HoverUnderlineLink";
 const Access: React.FC = () => {
   return (
     <>
+      <section id="access" />
       <Page>
-        <section id="access">
-          <HoverUnderlineLink>ACCESS</HoverUnderlineLink>
-          <GoogleMap />
-        </section>
+        <HoverUnderlineLink>ACCESS</HoverUnderlineLink>
+        <GoogleMap />
       </Page>
     </>
   );

@@ -3,6 +3,7 @@ import Top_title_img from "../../static/img/Top-title-img.png";
 import ScrollUp from "../../utils/ScrollUp";
 import FadeInImage from "../../components/FadingImage";
 
+import Live from "./Live";
 import Message from "./Message";
 import ThemeSong from "./ThemeSong";
 import Access from "./Access";
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <section id="home">
         <FadeInImage src={Top_title_img} alt="sanko festival" />
       </section>
+      <Live />
       <Message />
       <ThemeSong />
       <Access />

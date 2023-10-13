@@ -4,6 +4,7 @@ import HoverUnderlineLink from "../../components/HoverUnderlineLink";
 import Page from "../../components/Page";
 import Paragraph from "../../components/paragraph";
 import SlideInInfo from "../../components/SlideInInfo";
+import ImageSlider from "../../components/ImageSlider";
 
 const Message: React.FC = () => {
   const textBoxStyle = {
@@ -63,15 +64,13 @@ const Message: React.FC = () => {
             <div style={mobileH1}>
               <HoverUnderlineLink>Works</HoverUnderlineLink>
             </div>
-            <div style={mobileImgContainer}></div>
+            <div style={mobileImgContainer}>{/*<ImageSlider />*/}</div>
             <SlideInInfo>{formattedText}</SlideInInfo>
           </>
         ) : (
           <>
             <div style={pcH1}>
-              <HoverUnderlineLink>
-                百花繚乱～みんなの個性咲き誇れ～
-              </HoverUnderlineLink>
+              <HoverUnderlineLink>Works</HoverUnderlineLink>
             </div>
             <Grid container spacing={2}>
               <Grid style={textBoxStyle} item>
@@ -79,7 +78,7 @@ const Message: React.FC = () => {
               </Grid>
 
               <Grid item xs={6}>
-                <div style={mobileImgContainer}>img</div>
+                <div style={mobileImgContainer}>{/*<ImageSlider /> */}</div>
               </Grid>
             </Grid>
           </>
