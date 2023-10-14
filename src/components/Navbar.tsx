@@ -9,6 +9,7 @@ import {
   AiOutlineHome,
   AiOutlineCamera,
   AiOutlineExport,
+  AiOutlineCalendar,
 } from "react-icons/ai";
 import { BiMap } from "react-icons/bi";
 
@@ -54,7 +55,7 @@ const Navbar: React.FC = () => {
                 textDecoration: "none",
                 color: "inherit",
               }}
-              offset={() => window.innerHeight / 2 - window.innerHeight / 4}
+              offset={() => window.innerHeight / 8}
             >
               <Button
                 className={
@@ -68,12 +69,12 @@ const Navbar: React.FC = () => {
             </AnchorLink>
 
             <AnchorLink
-              href="#about"
+              href="#live"
               style={{
                 textDecoration: "none",
                 color: "inherit",
               }}
-              offset={() => window.innerHeight / 2 - window.innerHeight / 4}
+              offset={() => window.innerHeight / 8}
             >
               <Button
                 className={
@@ -104,6 +105,24 @@ const Navbar: React.FC = () => {
                 <AiOutlineHome />
               </Button>
             </AnchorLink>
+            <AnchorLink
+              href="#timetable"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
+              offset={() => window.innerHeight / 8}
+            >
+              <Button
+                className={
+                  isMobile
+                    ? classes.customButtonForMobile
+                    : classes.customButtonForPC
+                }
+              >
+                <AiOutlineCalendar />
+              </Button>
+            </AnchorLink>
 
             <AnchorLink
               href="#access"
@@ -111,7 +130,7 @@ const Navbar: React.FC = () => {
                 textDecoration: "none",
                 color: "inherit",
               }}
-              offset={() => window.innerHeight / 2 - window.innerHeight / 4}
+              offset={() => window.innerHeight / 8}
             >
               <Button
                 className={
@@ -122,7 +141,7 @@ const Navbar: React.FC = () => {
               >
                 <BiMap />
               </Button>
-            </AnchorLink>
+            </AnchorLink>           
           </Typography>
         </Toolbar>
       </AppBar>

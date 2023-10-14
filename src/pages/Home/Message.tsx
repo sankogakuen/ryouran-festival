@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Grid } from "@material-ui/core";
-import HoverUnderlineLink from "../../components/HoverUnderlineLink";
 import Page from "../../components/Page";
+import HoverUnderlineLink from "../../components/HoverUnderlineLink";
+import { Grid } from "@material-ui/core";
 import Paragraph from "../../components/paragraph";
 import SlideInInfo from "../../components/SlideInInfo";
 import ImageSlider from "../../components/ImageSlider";
@@ -57,7 +57,6 @@ const Message: React.FC = () => {
 
   return (
     <>
-      <section id="about" />
       <Page>
         {isMobile ? (
           <>
@@ -70,7 +69,7 @@ const Message: React.FC = () => {
         ) : (
           <>
             <div style={pcH1}>
-              <HoverUnderlineLink>Works</HoverUnderlineLink>
+              <HoverUnderlineLink>Message</HoverUnderlineLink>
             </div>
             <Grid container spacing={2}>
               <Grid style={textBoxStyle} item>
