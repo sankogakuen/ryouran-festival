@@ -16,6 +16,7 @@ const Home: React.FC = () => {
       <section id="home">
         <FadeInImage src={Top_title_img} alt="sanko festival" />
       </section>
+
       <Timetable />
       <Live />
       <Message />
