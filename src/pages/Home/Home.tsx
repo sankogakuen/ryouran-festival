@@ -1,20 +1,28 @@
-import React from 'react';
-import FadeInImage from '../../components/FadingImage'
-import Access from './Access'
-import Top_title_img from '../../static/img/Top-title-img.png'
-import ScrollUp from '../../utils/ScrollUp'
-import Page from '../../components/Page';
+import React from "react";
+import Top_title_img from "../../static/img/Top-title-img.png";
+import ScrollUp from "../../utils/ScrollUp";
+import FadeInImage from "../../components/FadingImage";
+
+import Live from "./Live";
+import Message from "./Message";
+import ThemeSong from "./ThemeSong";
+import Access from "./Access";
+import Links from "./Links";
 
 const Home: React.FC = () => {
-    return (
-        <>
-            <FadeInImage src={Top_title_img} alt="sanko festival" />
-            <Page>
-                <Access />
-            </Page>
-            <ScrollUp />
-        </>
-    );
+  return (
+    <>
+      <section id="home">
+        <FadeInImage src={Top_title_img} alt="sanko festival" />
+      </section>
+      <Live />
+      <Message />
+      <ThemeSong />
+      <Access />
+      <Links />
+      <ScrollUp />
+    </>
+  );
 };
 
 export default Home;
