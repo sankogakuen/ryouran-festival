@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import {
-  AiOutlineHome,
-  AiOutlineCamera,
-  AiOutlineExport,
-  AiOutlineCalendar,
-} from "react-icons/ai";
-import { BiMap } from "react-icons/bi";
+import HamburgerMenu from "./HamburgerMenu";
+import ToolbarMenu from "./ToolbarMenu";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -47,103 +40,17 @@ const Navbar: React.FC = () => {
   return (
     <>
       <AppBar color="default" position="static" className={classes.appBar}>
-        <Toolbar style={{ justifyContent: "center" }}>
-          <Typography>
-            <AnchorLink
-              href="#links"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
-              offset={() => window.innerHeight / 8}
-            >
-              <Button
-                className={
-                  isMobile
-                    ? classes.customButtonForMobile
-                    : classes.customButtonForPC
-                }
-              >
-                <AiOutlineExport />
-              </Button>
-            </AnchorLink>
-
-            <AnchorLink
-              href="#live"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
-              offset={() => window.innerHeight / 8}
-            >
-              <Button
-                className={
-                  isMobile
-                    ? classes.customButtonForMobile
-                    : classes.customButtonForPC
-                }
-              >
-                <AiOutlineCamera />
-              </Button>
-            </AnchorLink>
-
-            <AnchorLink
-              href="#home"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
-              offset={() => window.innerHeight / 2 - window.innerHeight / 4}
-            >
-              <Button
-                className={
-                  isMobile
-                    ? classes.customButtonForMobile
-                    : classes.customButtonForPC
-                }
-              >
-                <AiOutlineHome />
-              </Button>
-            </AnchorLink>
-            <AnchorLink
-              href="#timetable"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
-              offset={() => window.innerHeight / 8}
-            >
-              <Button
-                className={
-                  isMobile
-                    ? classes.customButtonForMobile
-                    : classes.customButtonForPC
-                }
-              >
-                <AiOutlineCalendar />
-              </Button>
-            </AnchorLink>
-
-            <AnchorLink
-              href="#access"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
-              offset={() => window.innerHeight / 8}
-            >
-              <Button
-                className={
-                  isMobile
-                    ? classes.customButtonForMobile
-                    : classes.customButtonForPC
-                }
-              >
-                <BiMap />
-              </Button>
-            </AnchorLink>           
-          </Typography>
-        </Toolbar>
+        {isMobile ? (
+          <Toolbar style={{ justifyContent: "left" }}>
+            <HamburgerMenu />
+          </Toolbar>
+        ) : (
+          <Toolbar style={{ justifyContent: "center" }}>
+            <Typography>
+              <ToolbarMenu />
+            </Typography>
+          </Toolbar>
+        )}
       </AppBar>
     </>
   );

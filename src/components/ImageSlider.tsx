@@ -4,20 +4,20 @@ interface content {
   images: string[];
 }
 
-const imagesPerScroll = 10; // 十回スクロールごとに画像を切り替える
+const imagesPerScroll = 1; // 十回スクロールごとに画像を切り替える
 
 const ImageSlider: React.FC<content> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scrollCount, setScrollCount] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [opacity, setOpacity] = useState(1);
 
   const handleScroll = (event: WheelEvent) => {
     event.preventDefault(); // Prevent default wheel scroll behavior
     const newScrollCount = scrollCount + 1;
     setScrollCount(newScrollCount);
-
     if (newScrollCount >= imagesPerScroll) {
-      // 十回スクロールごとに画像を切り替え
+      // 指定された回数スクロールごとに画像を切り替え
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       setScrollCount(0);
     }
@@ -42,8 +42,9 @@ const ImageSlider: React.FC<content> = ({ images }) => {
         <CardMedia
           component="img"
           alt={`Image ${currentIndex + 1}`}
-          height="400"
+          height="100%"
           image={images[currentIndex]}
+          style={{ opacity }}
           onWheel={(event) => event.preventDefault()} // Prevent wheel scroll on image
         />
         <CardContent></CardContent>

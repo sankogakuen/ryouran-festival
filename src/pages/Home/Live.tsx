@@ -13,7 +13,6 @@ import image4 from "../../static/img/Live/image4.png";
 const images = [image1, image2, image3, image4];
 
 const Live: React.FC = () => {
-  //
   return (
     <>
       <section id="live">
