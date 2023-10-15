@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-} from "@material-ui/core";
+import { ReactNode } from "react";
+import { IconButton, Drawer, Box } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import CustomListItem from "./CustomListItem";
+import { AiOutlineDoubleLeft } from "react-icons/ai";
 
-const MenuItems = ["Item 1", "Item 2", "Item 3"]; // メニューアイテムのリスト
+interface prop {
+  IconItems: ReactNode[];
+  MenuItems: string[];
+}
 
-const HamburgerMenu: React.FC = () => {
+const HamburgerMenu: React.FC<prop> = ({ IconItems, MenuItems }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer =
@@ -29,12 +27,7 @@ const HamburgerMenu: React.FC = () => {
 
   return (
     <>
-      <IconButton
-        edge="start"
-        color="inherit"
-        aria-label="menu"
-        onClick={toggleDrawer(true)}
-      >
+      <IconButton edge="start" aria-label="menu" onClick={toggleDrawer(true)}>
         <MenuIcon />
       </IconButton>
       <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
@@ -43,14 +36,13 @@ const HamburgerMenu: React.FC = () => {
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <List>
-            {MenuItems.map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
+          <IconButton edge="end" aria-label="menu" onClick={toggleDrawer(true)}>
+            <AiOutlineDoubleLeft />
+          </IconButton>
         </div>
+        {MenuItems.map((text, index) => (
+          <CustomListItem buttonText={text} icon={IconItems[index]} />
+        ))}
       </Drawer>
     </>
   );

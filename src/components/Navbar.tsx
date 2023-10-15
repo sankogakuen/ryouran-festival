@@ -5,6 +5,12 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import HamburgerMenu from "./HamburgerMenu";
 import ToolbarMenu from "./ToolbarMenu";
+import {
+  AiOutlineHome,
+  AiOutlineCamera,
+  AiOutlineExport,
+  AiOutlineCalendar,
+} from "react-icons/ai";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -37,12 +43,20 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  const IconItems = [
+    <AiOutlineHome />,
+    <AiOutlineCamera />,
+    <AiOutlineCamera />,
+    <AiOutlineCamera />,
+  ];
+  const MenuItems = ["Home", "Time table", "Live", "Message"];
+
   return (
     <>
       <AppBar color="default" position="static" className={classes.appBar}>
         {isMobile ? (
           <Toolbar style={{ justifyContent: "left" }}>
-            <HamburgerMenu />
+            <HamburgerMenu IconItems={IconItems} MenuItems={MenuItems} />
           </Toolbar>
         ) : (
           <Toolbar style={{ justifyContent: "center" }}>
