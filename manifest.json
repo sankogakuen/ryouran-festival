@@ -1,6 +1,6 @@
 {
-  "short_name": "Ryouran",
-  "name": "繚乱祭公式HP",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
