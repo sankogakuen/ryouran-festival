@@ -1,13 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Serif+JP:wght@300&family=Shippori+Mincho:wght@500&display=swap");
+
 body {
+  background-color: #fffff0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "M PLUS Rounded 1c",
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", "Noto Serif JP", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* フェードインアニメーション */
+.fadeIn {
+  opacity: 0;
+  animation-name: fadeIn; /* アニメーション名を指定 */
+  animation-duration: 2s; /* アニメーションの変化時間 */
+  animation-timing-function: ease-in-out; /* アニメーションの進行具合を操作→開始時と終了時は、かなり緩やかに変化 */
+  animation-fill-mode: forwards; /* アニメーションの開始と終了時の状態を指定 forwards→元の状態に戻らずアニメーション最後の状態を維持 */
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
