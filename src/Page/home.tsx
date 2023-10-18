@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Page from "../Components/Page";
 import Top from "./top";
 import Links from "./links";
+import Access from "./access";
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ const Home: React.FC = () => {
       <Page sectionId="Live">Live</Page>
       <Page sectionId="Message">Message</Page>
       <Page sectionId="Theme song">Theme song</Page>
-      <Page sectionId="Access">Access</Page>
+      <Page sectionId="Access">
+        <Access />
+      </Page>
       <Page sectionId="Links">
         <Links />
       </Page>
