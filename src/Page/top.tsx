@@ -7,7 +7,6 @@ const Top: React.FC = () => {
     fontSize: "100%",
     fontFamily: "Noto Serif JP",
     fontWeight: "800",
-    alignItems: "center",
   };
   return (
     <section id="Home">
@@ -20,15 +19,10 @@ const Top: React.FC = () => {
       >
         <Box width="100%" maxWidth="100%" textAlign="center">
           <img src={Top_Title_Img} alt="画像の説明" style={{ width: "80%" }} />
+          <div style={textStile}>
+            <p>百花繚乱</p> <p>～みんなの個性咲き誇れ～</p>
+          </div>
         </Box>
-        <div style={textStile}>
-          <Typography align="center" style={textStile}>
-            百花繚乱
-          </Typography>
-          <Typography align="center" style={textStile}>
-            ～みんなの個性咲き誇れ～
-          </Typography>
-        </div>
       </Grid>
     </section>
   );
