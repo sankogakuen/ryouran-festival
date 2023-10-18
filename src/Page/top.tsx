@@ -16,6 +16,7 @@ const Top: React.FC = () => {
         justifyContent="center"
         direction="column"
         sx={{ marginY: 4, height: "100vh" }}
+        className="fadeIn"
       >
         <Box width="100%" maxWidth="100%" textAlign="center">
           <img src={Top_Title_Img} alt="画像の説明" style={{ width: "80%" }} />
@@ -31,11 +32,5 @@ export default Top;
 
 {
   /*
-      <Container fixed style={{ height: "100vh" }}></Container>
-
-      <Grid container direction="column" alignItems="center" height="100vh">
-        <Grid item></Grid>
-        <Grid item></Grid>
-      </Grid>
-*/
+   */
 }
