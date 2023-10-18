@@ -16,7 +16,6 @@ const Top: React.FC = () => {
         alignItems="center"
         justifyContent="center"
         direction="column"
-        maxWidth="md"
         sx={{ marginY: 4, height: "100vh" }}
       >
         <Box width="100%" maxWidth="100%" textAlign="center">
