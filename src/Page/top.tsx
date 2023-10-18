@@ -28,9 +28,5 @@ const Top: React.FC = () => {
     </section>
   );
 };
-export default Top;
 
-{
-  /*
-   */
-}
+export default Top;
