@@ -1,16 +1,16 @@
 import * as React from "react";
-import styled from "@emotion/styled";
-import { Grid, Box } from "@mui/material";
+import { Grid, Toolbar } from "@mui/material";
+
+import Page from "../Components/Page";
+import SlideInImage from "../Components/SlideInImage";
+import NewTextBox from "../Components/NewTextBox";
+
 import image1 from "../static/img/msg/image1.png";
 import image2 from "../static/img/msg/image2.png";
 
-const Paragraph = styled.p`
-  text-align: justify;
-  text-indent: 1em;
-  hyphens: auto;
-`;
+const images = [image1, image2];
 
-const message: React.FC = () => {
+const Message: React.FC = () => {
   const messagedByYokoyamaText = `
                   みなさん、こんにちは！！！ 繚乱祭実行委員長の横山真人です。
                   今回の繚乱祭（文化祭）は、昨年度までには無かったショートムービーブロックや制作ブロック、またファションショーブロックやダンスブロックなどのステージパフォーマンスに特化したブロックなどがたくさんあります！
@@ -19,46 +19,45 @@ const message: React.FC = () => {
                   各ブロック、参加される生徒のみな一人一人がテーマを意識し、実際に個性を発揮して最高の繚乱祭を作り上げます！
                   最大規模の繚乱祭、皆さまぜひお越しください!
 `;
-  const formattedText = messagedByYokoyamaText
-    .split("\n")
-    .map((line, index) => (
-      <span key={index}>
-        {line}
-        {index !== messagedByYokoyamaText.split("\n").length - 1 && <br />}{" "}
-      </span>
-    ));
+  const containerStyle: React.CSSProperties = {
+    minHeight: "100vh", // ブラウザの縦の高さ分の広さを確保
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  };
 
+  const item: React.CSSProperties = {
+    minHeight: "100vh", // ブラウザの縦の高さ分の広さを確保
+    width: "80%", // 幅を80%に設定
+    background: "#0f0f0f0f",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  };
   return (
-    <>
-      <h1>Message</h1>
-      <Grid container height="100%" spacing={2}>
-        <Grid item xs={12} sm={5}>
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              textAlign: "justify",
-              textIndent: "1em",
-              hyphens: "auto",
-            }}
-          >
-            {formattedText}
-          </div>
-        </Grid>
-        <Grid item xs={12} sm={1}></Grid>
-
-        <Grid borderLeft={1} item xs={12} sm={1}></Grid>
-
-        <Grid xs={12} sm={5}>
-          <img
-            style={{ width: "100%" }}
-            src={image1}
-            alt="実行委員会メンバー"
-          />
-        </Grid>
-      </Grid>
-    </>
+    <section id="Message">
+      <div style={containerStyle}>
+        <Toolbar />
+        <div style={item}>
+          <h1>Message</h1>
+          <Grid container>
+            <Grid item xs={12} sm={5}>
+              <NewTextBox msgText={messagedByYokoyamaText} />
+            </Grid>
+            <Grid item xs={12} sm={1} sx={{ borderRight: 1 }} />
+            <Grid item xs={12} sm={1} />
+            <Grid item xs={12} sm={5}>
+              <div style={{ height: "50vh" }}>
+                <SlideInImage images={images} />
+              </div>
+            </Grid>
+          </Grid>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default message;
+export default Message;

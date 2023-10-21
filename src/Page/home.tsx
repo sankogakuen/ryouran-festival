@@ -13,22 +13,15 @@ const Home: React.FC = () => {
     <>
       <Navbar />
       <Top />
-      <Page sectionId="Time table">Time table</Page>
       <Page sectionId="Live">
         <Live />
       </Page>
-      <Page sectionId="Message">
-        <Message />
-      </Page>
-      <Page sectionId="Theme song">
-        <ThemeSong />
-      </Page>
+      <Message />
+      <ThemeSong />
       <Page sectionId="Access">
         <Access />
       </Page>
-      <Page sectionId="Links">
-        <Links />
-      </Page>
+      <Links />
     </>
   );
 };
