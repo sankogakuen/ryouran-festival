@@ -5,6 +5,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import List from "./List";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Top from "../Page/top";
+import ScrollShrinkComponent from "../Components/ScrollShrinkComponent";
 
 interface prop {
   IconItems: ReactNode[];
@@ -33,6 +35,7 @@ const HamburgerMenu: React.FC<prop> = ({ IconItems, MenuItems }) => {
       <IconButton edge="start" aria-label="menu" onClick={toggleDrawer(true)}>
         <MenuIcon />
       </IconButton>
+
       {/* ボタンを押したら出てくるやつ */}
       <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
         <div

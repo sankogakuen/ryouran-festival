@@ -1,15 +1,16 @@
 import * as React from "react";
-import { Grid, Toolbar } from "@mui/material";
+import { Box, Typography, Container, Grid, Toolbar } from "@mui/material";
 
-import Page from "../Components/Page";
 import SlideInImage from "../Components/SlideInImage";
 import NewTextBox from "../Components/NewTextBox";
+import NewH1 from "../Components/NewH1";
 
 import image1 from "../static/img/msg/image1.png";
 import image2 from "../static/img/msg/image2.png";
 
 const images = [image1, image2];
 
+// styled-componentsを使用して下線スタイルを定義
 const Message: React.FC = () => {
   const messagedByYokoyamaText = `
                   みなさん、こんにちは！！！ 繚乱祭実行委員長の横山真人です。
@@ -20,7 +21,8 @@ const Message: React.FC = () => {
                   最大規模の繚乱祭、皆さまぜひお越しください!
 `;
   const containerStyle: React.CSSProperties = {
-    minHeight: "100vh", // ブラウザの縦の高さ分の広さを確保
+    minHeight: "100vh", // 最小の高さにブラウザの縦の高さ分の広さを確保
+    maxHeight: "200vh", // 最大の高さにブラウザの縦の高さ2つ分の広さを確保
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -29,29 +31,28 @@ const Message: React.FC = () => {
 
   const item: React.CSSProperties = {
     minHeight: "100vh", // ブラウザの縦の高さ分の広さを確保
+    maxHeight: "200vh", // ブラウザの縦の高さ分の広さを確保
     width: "80%", // 幅を80%に設定
-    background: "#0f0f0f0f",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   };
+
   return (
     <section id="Message">
       <div style={containerStyle}>
         <Toolbar />
         <div style={item}>
-          <h1>Message</h1>
-          <Grid container>
-            <Grid item xs={12} sm={5}>
-              <NewTextBox msgText={messagedByYokoyamaText} />
-            </Grid>
-            <Grid item xs={12} sm={1} sx={{ borderRight: 1 }} />
-            <Grid item xs={12} sm={1} />
-            <Grid item xs={12} sm={5}>
-              <div style={{ height: "50vh" }}>
+          <NewH1>Message</NewH1>
+          <Grid container spacing={5}>
+            <Grid item xs={12} sm={6}>
+              <Box height="50%">
                 <SlideInImage images={images} />
-              </div>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <NewTextBox msgText={messagedByYokoyamaText}>詳細</NewTextBox>
             </Grid>
           </Grid>
         </div>

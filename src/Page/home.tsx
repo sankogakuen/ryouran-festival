@@ -1,29 +1,27 @@
 import * as React from "react";
 import Navbar from "../Navbar/Navbar";
-import Page from "../Components/Page";
-import Top from "./top";
 import Live from "./live";
 import Message from "./message";
 import ThemeSong from "./themesong";
 import Access from "./access";
 import Links from "./links";
+import Top from "../Page/top";
 
 const Home: React.FC = () => {
   return (
-    <>
+    <div>
       <Navbar />
       <Top />
-      <Page sectionId="Live">
-        <Live />
-      </Page>
+      <Live />
       <Message />
       <ThemeSong />
-      <Page sectionId="Access">
-        <Access />
-      </Page>
+      <Access />
       <Links />
-    </>
+    </div>
   );
 };
+/*
+ 
+ */
 
 export default Home;

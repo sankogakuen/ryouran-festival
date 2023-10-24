@@ -2,12 +2,14 @@ import * as React from "react";
 import { useState } from "react";
 import { Button, Typography, Collapse } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
+import SlideInFadeInComponent from "./SlideInFadeInComponent";
 
 interface Props {
   msgText: string;
+  children: React.ReactNode;
 }
 
-const NewTextBox: React.FC<Props> = ({ msgText }) => {
+const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
   const isMobile = !useMediaQuery("(max-width:600px)");
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -35,17 +37,13 @@ const NewTextBox: React.FC<Props> = ({ msgText }) => {
   );
 
   if (isMobile) {
-    return <>{commonContent}</>;
+    return <SlideInFadeInComponent>{commonContent}</SlideInFadeInComponent>;
   } else {
     return (
       <>
         <Collapse in={!isCollapsed}>{commonContent}</Collapse>
-        {isCollapsed && (
-          <Button onClick={toggleCollapse}>メッセージを見る</Button>
-        )}
-        {!isCollapsed && (
-          <Button onClick={toggleCollapse}>メッセージを閉じる</Button>
-        )}
+        {isCollapsed && <div onClick={toggleCollapse}>{children}</div>}
+        {!isCollapsed && <Button onClick={toggleCollapse}>{children}</Button>}
       </>
     );
   }

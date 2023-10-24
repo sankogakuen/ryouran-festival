@@ -24,7 +24,7 @@ const BodyCard: React.FC<Props> = (props) => {
   const { avatar, title, text, imageUrl, popUpUrl } = props;
 
   return (
-    <Card variant="outlined">
+    <Card>
       <CardHeader avatar={avatar} title={title} />
       <CardMedia style={{ height: "150px" }} image={imageUrl} />
       <CardContent>

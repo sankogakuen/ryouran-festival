@@ -8,7 +8,8 @@ interface props {
 
 const Page: React.FC<props> = ({ children, sectionId }) => {
   const containerStyle: React.CSSProperties = {
-    minHeight: "100vh", // ブラウザの縦の高さ分の広さを確保
+    minHeight: "100vh", // 最小の高さにブラウザの縦の高さ分の広さを確保
+    maxHeight: "100vh", // 最大の高さにブラウザの縦の高さ2つ分の広さを確保
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -16,9 +17,8 @@ const Page: React.FC<props> = ({ children, sectionId }) => {
   };
 
   const item: React.CSSProperties = {
-    height: "100vh", // ブラウザの縦の高さ分の広さを確保
     width: "80%", // 幅を80%に設定
-    background: "#0f0f0f0f",
+    height: "90vh", // ブラウザの縦の高さ分の広さを確保
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
