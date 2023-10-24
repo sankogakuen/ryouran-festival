@@ -4,6 +4,7 @@ import { Box, Typography, Container, Grid, Toolbar } from "@mui/material";
 import SlideInImage from "../Components/SlideInImage";
 import NewTextBox from "../Components/NewTextBox";
 import NewH1 from "../Components/NewH1";
+import Page from "../Components/Page";
 
 import image1 from "../static/img/msg/image1.png";
 import image2 from "../static/img/msg/image2.png";
@@ -40,24 +41,19 @@ const Message: React.FC = () => {
   };
 
   return (
-    <section id="Message">
-      <div style={containerStyle}>
-        <Toolbar />
-        <div style={item}>
-          <NewH1>Message</NewH1>
-          <Grid container spacing={5}>
-            <Grid item xs={12} sm={6}>
-              <Box height="50%">
-                <SlideInImage images={images} />
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <NewTextBox msgText={messagedByYokoyamaText}>詳細</NewTextBox>
-            </Grid>
-          </Grid>
-        </div>
-      </div>
-    </section>
+    <Page sectionId="Message">
+      <NewH1>Message</NewH1>
+      <Grid container spacing={5}>
+        <Grid item xs={12} sm={6}>
+          <Box height="50%">
+            <SlideInImage images={images} />
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <NewTextBox msgText={messagedByYokoyamaText}>詳細</NewTextBox>
+        </Grid>
+      </Grid>
+    </Page>
   );
 };
 

@@ -13,7 +13,7 @@ const SlideInFromRightComponent: React.FC<Props> = ({ children }) => {
   });
 
   const variants = {
-    hidden: { x: 100, opacity: 0 }, // 右側に移動して非表示
+    hidden: { x: 40, opacity: 0 }, // 右側に移動して非表示
     visible: {
       x: 0,
       opacity: 1,

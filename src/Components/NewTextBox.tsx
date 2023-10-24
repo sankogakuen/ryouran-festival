@@ -4,6 +4,8 @@ import { Button, Typography, Collapse } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import SlideInFadeInComponent from "./SlideInFadeInComponent";
 
+import { AiFillCaretRight, AiFillCaretUp } from "react-icons/ai";
+
 interface Props {
   msgText: string;
   children: React.ReactNode;
@@ -24,6 +26,11 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
     </span>
   ));
 
+  const textStile = {
+    fontSize: "100%",
+    fontFamily: "M PLUS Rounded 1c",
+    fontWeight: "500",
+  };
   const commonContent = (
     <div
       style={{
@@ -32,7 +39,9 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
         hyphens: "auto",
       }}
     >
-      <Typography variant="body1">{formattedText}</Typography>
+      <Typography variant="body1" style={textStile}>
+        {formattedText}
+      </Typography>
     </div>
   );
 
@@ -42,8 +51,16 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
     return (
       <>
         <Collapse in={!isCollapsed}>{commonContent}</Collapse>
-        {isCollapsed && <div onClick={toggleCollapse}>{children}</div>}
-        {!isCollapsed && <Button onClick={toggleCollapse}>{children}</Button>}
+        {isCollapsed && (
+          <div onClick={toggleCollapse}>
+            <AiFillCaretRight />
+          </div>
+        )}
+        {!isCollapsed && (
+          <div onClick={toggleCollapse}>
+            <AiFillCaretUp />
+          </div>
+        )}
       </>
     );
   }

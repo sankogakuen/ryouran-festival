@@ -9,7 +9,7 @@ import Top from "../Page/top";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Top />
       <Live />
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       <ThemeSong />
       <Access />
       <Links />
-    </div>
+    </>
   );
 };
 /*
