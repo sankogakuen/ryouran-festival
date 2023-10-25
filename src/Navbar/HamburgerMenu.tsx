@@ -5,7 +5,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import List from "./List";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import BigTitle from "../static/img/BigTitle.png";
 
 interface prop {
   IconItems: ReactNode[];
@@ -59,19 +58,12 @@ const HamburgerMenu: React.FC<prop> = ({ IconItems, MenuItems }) => {
         {MenuItems.map((text, index) => (
           <AnchorLink
             href={`#${text}`}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", color: "#000000" }}
             key={index}
           >
             <List buttonText={text} icon={IconItems[index]} key={index} />
           </AnchorLink>
         ))}
-        <div
-          role="presentation"
-          onClick={toggleDrawer(false)}
-          onKeyDown={toggleDrawer(false)}
-        >
-          <img src={BigTitle} alt="title" style={{ width: "60%" }} />
-        </div>
       </Drawer>
     </>
   );

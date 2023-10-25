@@ -29,33 +29,39 @@ const Top: React.FC = () => {
   };
 
   return (
-    <Box
-      style={newBox}
-      height="90vh" // 画面の高さいっぱいまで要素を広げる
-      position="relative"
-      className="fadeIn"
-      flexDirection="column"
-    >
-      <Fade in={firstImageVisible} timeout={2000}>
-        <Box style={newBox} position="absolute">
-          <img src={BigTitle} alt="画像の説明" style={{ width: "80%" }} />
-        </Box>
-      </Fade>
-      <Fade in={secondImageVisible} timeout={2000}>
-        <Box
-          style={textStile}
-          display="flex"
-          flexDirection="column" // 縦に配置
-          justifyContent="center"
-          alignItems="center"
-          position="absolute"
-        >
-          <img src={Top_Title_Img} alt="画像の説明" style={{ width: "80%" }} />
-          <div>百花繚乱</div>
-          <div>～みんなの個性咲き誇れ～</div>
-        </Box>
-      </Fade>
-    </Box>
+    <section id="Home">
+      <Box
+        style={newBox}
+        height="90vh" // 画面の高さいっぱいまで要素を広げる
+        position="relative"
+        className="fadeIn"
+        flexDirection="column"
+      >
+        <Fade in={firstImageVisible} timeout={2000}>
+          <Box style={newBox} position="absolute">
+            <img src={BigTitle} alt="画像の説明" style={{ width: "80%" }} />
+          </Box>
+        </Fade>
+        <Fade in={secondImageVisible} timeout={2000}>
+          <Box
+            style={textStile}
+            display="flex"
+            flexDirection="column" // 縦に配置
+            justifyContent="center"
+            alignItems="center"
+            position="absolute"
+          >
+            <img
+              src={Top_Title_Img}
+              alt="画像の説明"
+              style={{ width: "80%" }}
+            />
+            <div>百花繚乱</div>
+            <div>～みんなの個性咲き誇れ～</div>
+          </Box>
+        </Fade>
+      </Box>
+    </section>
   );
 };
 
