@@ -4,6 +4,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import HamburgerMenu from "../Navbar/HamburgerMenu";
 
+import BigTitle from "../static/img/BigTitle.png";
+
 import {
   AiOutlineHome,
   AiOutlineCamera,
@@ -35,7 +37,6 @@ const Navbar: React.FC = () => {
       <AppBar style={CustomAppBar}>
         <Toolbar>
           <HamburgerMenu IconItems={IconItems} MenuItems={MenuItems} />
-          <Typography variant="h6">Menu</Typography>
         </Toolbar>
       </AppBar>
     </div>

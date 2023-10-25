@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import { Button, Typography, Collapse } from "@mui/material";
+import { Typography, Collapse } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import SlideInFadeInComponent from "./SlideInFadeInComponent";
 
@@ -31,6 +31,7 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
     fontFamily: "M PLUS Rounded 1c",
     fontWeight: "500",
   };
+
   const commonContent = (
     <div
       style={{
@@ -50,17 +51,19 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
   } else {
     return (
       <>
-        <Collapse in={!isCollapsed}>{commonContent}</Collapse>
-        {isCollapsed && (
-          <div onClick={toggleCollapse}>
-            <AiFillCaretRight />
-          </div>
-        )}
-        {!isCollapsed && (
-          <div onClick={toggleCollapse}>
-            <AiFillCaretUp />
-          </div>
-        )}
+        <SlideInFadeInComponent>
+          <Collapse in={!isCollapsed}>{commonContent}</Collapse>
+          {isCollapsed && (
+            <div onClick={toggleCollapse}>
+              <AiFillCaretRight /> タップして詳細を表示
+            </div>
+          )}
+          {!isCollapsed && (
+            <div onClick={toggleCollapse}>
+              <AiFillCaretUp /> タップして閉じる
+            </div>
+          )}
+        </SlideInFadeInComponent>
       </>
     );
   }

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Grid, Toolbar, Box } from "@mui/material";
+import SlideInFadeInComponent from "../Components/SlideInFadeInComponent";
 
 interface props {
   children: React.ReactNode;
@@ -28,8 +29,7 @@ const Page: React.FC<props> = ({ children, sectionId }) => {
   return (
     <section id={sectionId}>
       <div style={containerStyle}>
-        <Toolbar />
-        <div style={item}>{children}</div>
+        <Toolbar /> <div style={item}>{children}</div>
       </div>
     </section>
   );

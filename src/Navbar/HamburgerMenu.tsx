@@ -1,12 +1,11 @@
 import * as React from "react";
 import { ReactNode, useState } from "react";
-import { Drawer, IconButton } from "@mui/material";
+import { Grid, Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import List from "./List";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Top from "../Page/top";
-import ScrollShrinkComponent from "../Components/ScrollShrinkComponent";
+import BigTitle from "../static/img/BigTitle.png";
 
 interface prop {
   IconItems: ReactNode[];
@@ -31,10 +30,18 @@ const HamburgerMenu: React.FC<prop> = ({ IconItems, MenuItems }) => {
 
   return (
     <>
-      {/* Menu iconを表示 */}
-      <IconButton edge="start" aria-label="menu" onClick={toggleDrawer(true)}>
-        <MenuIcon />
-      </IconButton>
+      <Grid container alignItems="center" justifyContent="space-between">
+        <Grid item>
+          {/* Menu iconを表示 */}
+          <IconButton
+            edge="start"
+            aria-label="menu"
+            onClick={toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Grid>
+      </Grid>
 
       {/* ボタンを押したら出てくるやつ */}
       <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
@@ -48,15 +55,23 @@ const HamburgerMenu: React.FC<prop> = ({ IconItems, MenuItems }) => {
             <ClearIcon />
           </IconButton>
         </div>
+
         {MenuItems.map((text, index) => (
           <AnchorLink
             href={`#${text}`}
-            style={{ textDecoration: "none", color: "#000000" }}
+            style={{ textDecoration: "none" }}
             key={index}
           >
             <List buttonText={text} icon={IconItems[index]} key={index} />
           </AnchorLink>
         ))}
+        <div
+          role="presentation"
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
+        >
+          <img src={BigTitle} alt="title" style={{ width: "60%" }} />
+        </div>
       </Drawer>
     </>
   );
