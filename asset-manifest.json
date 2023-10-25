@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ryouran-festival/static/css/main.92ad9065.css",
-    "main.js": "/ryouran-festival/static/js/main.28cfb374.js",
+    "main.js": "/ryouran-festival/static/js/main.8a805e4b.js",
     "static/js/787.7ae5d92e.chunk.js": "/ryouran-festival/static/js/787.7ae5d92e.chunk.js",
     "static/media/omiyaHP.png": "/ryouran-festival/static/media/omiyaHP.30f396056016e341dec3.png",
     "static/media/image1.png": "/ryouran-festival/static/media/image1.dab687ff54fd4755bfd3.png",
@@ -14,11 +14,11 @@
     "static/media/Top-title-img.png": "/ryouran-festival/static/media/Top-title-img.e53185d875ee4776786a.png",
     "index.html": "/ryouran-festival/index.html",
     "main.92ad9065.css.map": "/ryouran-festival/static/css/main.92ad9065.css.map",
-    "main.28cfb374.js.map": "/ryouran-festival/static/js/main.28cfb374.js.map",
+    "main.8a805e4b.js.map": "/ryouran-festival/static/js/main.8a805e4b.js.map",
     "787.7ae5d92e.chunk.js.map": "/ryouran-festival/static/js/787.7ae5d92e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92ad9065.css",
-    "static/js/main.28cfb374.js"
+    "static/js/main.8a805e4b.js"
   ]
 }
