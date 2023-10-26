@@ -35,7 +35,6 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
   const commonContent = (
     <div
       style={{
-        width: "100%",
         textAlign: "justify",
         hyphens: "auto",
       }}

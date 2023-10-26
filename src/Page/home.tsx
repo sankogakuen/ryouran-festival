@@ -6,6 +6,7 @@ import ThemeSong from "./themesong";
 import Access from "./access";
 import Links from "./links";
 import Top from "../Page/top";
+import StateOfLastYear from "./stateoflastyear";
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <Top />
       <Live />
       <Message />
+      <StateOfLastYear />
       <ThemeSong />
       <Access />
       <Links />
@@ -21,7 +23,6 @@ const Home: React.FC = () => {
   );
 };
 /*
- 
  */
 
 export default Home;

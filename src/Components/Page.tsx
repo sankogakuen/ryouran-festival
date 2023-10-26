@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Grid, Toolbar, Box } from "@mui/material";
-import SlideInFadeInComponent from "../Components/SlideInFadeInComponent";
+import { Box } from "@mui/material";
 
 interface props {
   children: React.ReactNode;
@@ -8,31 +7,27 @@ interface props {
 }
 
 const Page: React.FC<props> = ({ children, sectionId }) => {
-  const containerStyle: React.CSSProperties = {
-    minHeight: "50vh", // 最小の高さにブラウザの縦の高さ分の広さを確保
-    maxHeight: "1000vh", // 最大の高さにブラウザの縦の高さ2つ分の広さを確保
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-
-  const item: React.CSSProperties = {
-    height: "100vh", // ブラウザの縦の高さ分の広さを確保
-    flexDirection: "column",
-    justifyContent: "center",
-    display: "flex",
-    alignItems: "center",
-    width: "80%",
-  };
-
   return (
     <section id={sectionId}>
-      <div style={containerStyle}>
-        <Toolbar /> <div style={item}>{children}</div>
-      </div>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        maxWidth={"80%"}
+        margin="0 auto" // 左右のマージンを自動調整して中央配置
+      >
+        <Box>{children}</Box>
+      </Box>
     </section>
   );
 };
+
+/*
+
+      <div style={containerStyle}>
+        <Toolbar />
+        <div style={item}></div>
+      </div>
+ */
 
 export default Page;

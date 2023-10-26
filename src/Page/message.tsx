@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Typography, Container, Grid, Toolbar } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 import SlideInImage from "../Components/SlideInImage";
 import NewTextBox from "../Components/NewTextBox";
@@ -21,24 +21,6 @@ const Message: React.FC = () => {
                   各ブロック、参加される生徒のみな一人一人がテーマを意識し、実際に個性を発揮して最高の繚乱祭を作り上げます！
                   最大規模の繚乱祭、皆さまぜひお越しください!
 `;
-  const containerStyle: React.CSSProperties = {
-    minHeight: "100vh", // 最小の高さにブラウザの縦の高さ分の広さを確保
-    maxHeight: "200vh", // 最大の高さにブラウザの縦の高さ2つ分の広さを確保
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-
-  const item: React.CSSProperties = {
-    minHeight: "100vh", // ブラウザの縦の高さ分の広さを確保
-    maxHeight: "200vh", // ブラウザの縦の高さ分の広さを確保
-    width: "80%", // 幅を80%に設定
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
 
   return (
     <Page sectionId="Message">
@@ -56,5 +38,9 @@ const Message: React.FC = () => {
     </Page>
   );
 };
+
+/*
+
+ */
 
 export default Message;

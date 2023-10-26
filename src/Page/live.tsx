@@ -18,6 +18,12 @@ const live: React.FC = () => {
 日時：11月27日（月）13:00から15:30
 内容：ファッションショー・ダンス・ショートムービー・kahoot大会など
 `;
+  const formattedText = liveTimeTable.split("\n").map((line, index) => (
+    <span key={index}>
+      {line}
+      {index !== liveTimeTable.split("\n").length - 1 && <br />}{" "}
+    </span>
+  ));
 
   const textStile = {
     fontSize: "100%",
@@ -26,22 +32,19 @@ const live: React.FC = () => {
   };
   return (
     <Page sectionId="Live">
-      <Box width="100%">
-        <NewH1>Live</NewH1>
-      </Box>
-      <Grid container spacing={5}>
+      <NewH1>Live</NewH1>
+      <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
-          <SlideInImage images={images} />
+          <Box height="50%">
+            <SlideInImage images={images} />
+          </Box>
         </Grid>
         <Grid item xs={12} sm={6} style={textStile}>
-          <NewTextBox msgText={liveTimeTable}>...</NewTextBox>
+          <div style={textStile}>{formattedText}</div>
         </Grid>
       </Grid>
     </Page>
   );
 };
-/*
-
- * */
 
 export default live;

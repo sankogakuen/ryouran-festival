@@ -3,6 +3,7 @@ import Top_Title_Img from "../static/img/Top-title-img.png";
 import BigTitle from "../static/img/BigTitle.png";
 import { Fade, Box } from "@mui/material";
 
+import Page from "../Components/Page";
 const Top: React.FC = () => {
   const [firstImageVisible, setFirstImageVisible] = useState(true);
   const [secondImageVisible, setSecondImageVisible] = useState(false);
@@ -26,6 +27,7 @@ const Top: React.FC = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
   };
 
   return (
@@ -38,7 +40,11 @@ const Top: React.FC = () => {
         flexDirection="column"
       >
         <Fade in={firstImageVisible} timeout={2000}>
-          <Box style={newBox} position="absolute">
+          <Box
+            style={newBox}
+            flexDirection="column" // 縦に配置
+            position="absolute"
+          >
             <img src={BigTitle} alt="画像の説明" style={{ width: "80%" }} />
           </Box>
         </Fade>
@@ -69,6 +75,13 @@ export default Top;
 
 /*
 
+      <Box
+        style={newBox}
+        height="90vh" // 画面の高さいっぱいまで要素を広げる
+        position="relative"
+        className="fadeIn"
+        flexDirection="column"
+      >
   const textStile = {
     fontSize: "100%",
     fontFamily: "Noto Serif JP",

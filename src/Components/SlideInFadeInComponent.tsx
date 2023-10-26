@@ -13,7 +13,7 @@ const SlideInFromRightComponent: React.FC<Props> = ({ children }) => {
   });
 
   const variants = {
-    hidden: { x: 60, opacity: 0 }, // 右側に移動して非表示
+    hidden: { x: 0, opacity: 0 }, // 右側に移動して非表示
     visible: {
       x: 0,
       opacity: 1,
@@ -21,7 +21,7 @@ const SlideInFromRightComponent: React.FC<Props> = ({ children }) => {
         duration: 1, // アニメーションの時間を調整 (秒単位)
         ease: "easeInOut", // イージングを調整
       },
-    }, // 右からスライドインして表示
+    },
   };
 
   return (

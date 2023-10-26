@@ -10,7 +10,7 @@ const NewH1: React.FC<props> = ({ children }) => {
   const link: React.CSSProperties = {
     position: "relative",
     content: '""',
-    left: "0", // 右端から線を出現させる
+    left: "100", // 右端から線を出現させる
     top: -10,
     width: "100", // 初期状態では幅0にする
     height: 1,
@@ -18,7 +18,14 @@ const NewH1: React.FC<props> = ({ children }) => {
   };
 
   return (
-    <Box width="100%">
+    <Box
+      style={{
+        width: "100%",
+        fontSize: "100%",
+        fontFamily: "Nunito",
+        fontWeight: "500",
+      }}
+    >
       <SlideInFadeInComponent>
         <h1>{children}</h1>
         <div style={link}></div>
