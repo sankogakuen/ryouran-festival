@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Top_Title_Img from "../static/img/Top-title-img.png";
 import BigTitle from "../static/img/BigTitle.png";
-import { Fade, Box } from "@mui/material";
+import { Fade, Box, Grid, Typography } from "@mui/material";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 import Page from "../Components/Page";
 const Top: React.FC = () => {
@@ -23,6 +24,11 @@ const Top: React.FC = () => {
     fontFamily: "Noto Serif JP",
     fontWeight: "800",
   };
+  const dateStile = {
+    fontSize: "100%",
+    fontFamily: "Noto Serif JP",
+    fontWeight: "800",
+  };
   const newBox = {
     display: "flex",
     justifyContent: "center",
@@ -34,7 +40,7 @@ const Top: React.FC = () => {
     <section id="Home">
       <Box
         style={newBox}
-        height="90vh" // 画面の高さいっぱいまで要素を広げる
+        height="100vh" // 画面の高さいっぱいまで要素を広げる
         position="relative"
         className="fadeIn"
         flexDirection="column"
@@ -49,21 +55,74 @@ const Top: React.FC = () => {
           </Box>
         </Fade>
         <Fade in={secondImageVisible} timeout={2000}>
-          <Box
-            style={textStile}
-            display="flex"
-            flexDirection="column" // 縦に配置
-            justifyContent="center"
-            alignItems="center"
-            position="absolute"
-          >
-            <img
-              src={Top_Title_Img}
-              alt="画像の説明"
-              style={{ width: "80%" }}
-            />
-            <div>百花繚乱</div>
-            <div>～みんなの個性咲き誇れ～</div>
+          <Box position="absolute">
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <Box maxHeight={"50%"}>
+                  <Box
+                    style={textStile}
+                    display="flex"
+                    flexDirection="column" // 縦に配置
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <img
+                      src={Top_Title_Img}
+                      alt="画像の説明"
+                      style={{ width: "80%" }}
+                    />
+                    <div>百花繚乱</div>
+                    <div>～みんなの個性咲き誇れ～</div>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid item xs={12}>
+                <Grid
+                  style={dateStile}
+                  display="flex"
+                  flexDirection="column" // 縦に配置
+                  alignItems="center"
+                  justifyContent="center"
+                  width="80%"
+                  container
+                >
+                  <Box
+                    alignItems="left"
+                    display="flex"
+                    flexDirection="column" // 縦に配置
+                    justifyContent="center"
+                    width="80%"
+                  >
+                    <Grid item xs={12}>
+                      <h3 style={{ margin: "5px 0" }}>2023</h3>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Grid container spacing={2}>
+                        <Grid item>
+                          <Typography variant="h4">11/26</Typography>
+                        </Grid>
+                        <Grid item>
+                          <Typography variant="h5">sun</Typography>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid item xs={12} maxWidth={"80%"}>
+                      <AiOutlineCaretDown />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Grid container spacing={2}>
+                        <Grid item>
+                          <Typography variant="h4">11/27</Typography>
+                        </Grid>
+                        <Grid item>
+                          <Typography variant="h5">mon</Typography>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Grid>
           </Box>
         </Fade>
       </Box>

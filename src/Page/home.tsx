@@ -7,12 +7,14 @@ import Access from "./access";
 import Links from "./links";
 import Top from "../Page/top";
 import StateOfLastYear from "./stateoflastyear";
+import Date from "./date";
 
 const Home: React.FC = () => {
   return (
     <>
       <Navbar />
       <Top />
+      <Date />
       <Live />
       <Message />
       <StateOfLastYear />
