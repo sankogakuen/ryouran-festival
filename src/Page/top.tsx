@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Top_Title_Img from "../static/img/Top-title-img.png";
 import BigTitle from "../static/img/BigTitle.png";
-import { Fade, Box, Grid, Typography } from "@mui/material";
+import { Fade, Box, Grid, Typography, Paper } from "@mui/material";
 import { AiOutlineCaretDown } from "react-icons/ai";
 
-import Page from "../Components/Page";
 const Top: React.FC = () => {
   const [firstImageVisible, setFirstImageVisible] = useState(true);
   const [secondImageVisible, setSecondImageVisible] = useState(false);
@@ -20,9 +19,7 @@ const Top: React.FC = () => {
     };
   }, []);
   const textStile = {
-    fontSize: "100%",
     fontFamily: "Noto Serif JP",
-    fontWeight: "800",
   };
   const dateStile = {
     fontSize: "100%",
@@ -58,11 +55,17 @@ const Top: React.FC = () => {
           <Box position="absolute">
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <Box maxHeight={"50%"}>
+                <Box
+                  maxHeight={"50%"}
+                  style={textStile}
+                  display="flex"
+                  flexDirection="column" // 縦に配置
+                  justifyContent="center"
+                  alignItems="center"
+                >
                   <Box
-                    style={textStile}
-                    display="flex"
                     flexDirection="column" // 縦に配置
+                    display="flex"
                     justifyContent="center"
                     alignItems="center"
                   >
@@ -80,10 +83,8 @@ const Top: React.FC = () => {
                 <Grid
                   style={dateStile}
                   display="flex"
-                  flexDirection="column" // 縦に配置
                   alignItems="center"
                   justifyContent="center"
-                  width="80%"
                   container
                 >
                   <Box
@@ -99,10 +100,14 @@ const Top: React.FC = () => {
                     <Grid item xs={12}>
                       <Grid container spacing={2}>
                         <Grid item>
-                          <Typography variant="h4">11/26</Typography>
+                          <Typography style={textStile} variant="h4">
+                            11/26
+                          </Typography>
                         </Grid>
                         <Grid item>
-                          <Typography variant="h5">sun</Typography>
+                          <Typography style={textStile} variant="h5">
+                            sun
+                          </Typography>
                         </Grid>
                       </Grid>
                     </Grid>
@@ -112,10 +117,14 @@ const Top: React.FC = () => {
                     <Grid item xs={12}>
                       <Grid container spacing={2}>
                         <Grid item>
-                          <Typography variant="h4">11/27</Typography>
+                          <Typography style={textStile} variant="h4">
+                            11/27
+                          </Typography>
                         </Grid>
                         <Grid item>
-                          <Typography variant="h5">mon</Typography>
+                          <Typography style={textStile} variant="h5">
+                            mon
+                          </Typography>
                         </Grid>
                       </Grid>
                     </Grid>
