@@ -1,7 +1,6 @@
 import * as React from "react";
 import Page from "../Components/Page";
 import NewH1 from "../Components/NewH1";
-import { Grid, Box } from "@mui/material";
 
 const Date: React.FC = () => {
   return (
@@ -13,8 +12,8 @@ const Date: React.FC = () => {
           width: "80vw",
         }}
       >
-        <p>1日目</p>
-        <p>2日目</p>
+        <p>1日目: 11/26(日)</p>
+        <p>2日目: 11/27(月)</p>
       </div>
     </Page>
   );

@@ -26,9 +26,9 @@ const live: React.FC = () => {
   ));
 
   const textStile = {
+    color: "#113946",
     fontSize: "100%",
-    fontFamily: "Noto Serif JP",
-    fontWeight: "800",
+    fontFamily: "M PLUS Rounded 1c",
   };
   return (
     <Page sectionId="Live">

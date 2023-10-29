@@ -6,8 +6,8 @@ import NewTextBox from "../Components/NewTextBox";
 import NewH1 from "../Components/NewH1";
 import Page from "../Components/Page";
 
-import image1 from "../static/img/StateOfLastYear/image1.png";
-import image2 from "../static/img/StateOfLastYear/image2.png";
+import image1 from "../static/img/StateOfLastYear/image2.png";
+import image2 from "../static/img/StateOfLastYear/image1.png";
 import image4 from "../static/img/StateOfLastYear/image4.png";
 import image5 from "../static/img/StateOfLastYear/image5.png";
 

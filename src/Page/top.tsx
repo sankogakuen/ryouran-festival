@@ -57,21 +57,19 @@ const Top: React.FC = () => {
               <Grid item xs={12}>
                 <Box
                   maxHeight={"50%"}
-                  style={textStile}
                   display="flex"
-                  flexDirection="column" // 縦に配置
-                  justifyContent="center"
-                  alignItems="center"
+                  justifyContent="center" // 横揃えで配置
                 >
                   <Box
-                    flexDirection="column" // 縦に配置
+                    style={textStile}
                     display="flex"
-                    justifyContent="center"
+                    flexDirection="column" // 縦に揃えて配置
+                    justifyContent="center" // 横揃えで配置
                     alignItems="center"
                   >
                     <img
                       src={Top_Title_Img}
-                      alt="画像の説明"
+                      alt="To title img"
                       style={{ width: "80%" }}
                     />
                     <div>百花繚乱</div>
@@ -140,43 +138,3 @@ const Top: React.FC = () => {
 };
 
 export default Top;
-
-/*
-
-      <Box
-        style={newBox}
-        height="90vh" // 画面の高さいっぱいまで要素を広げる
-        position="relative"
-        className="fadeIn"
-        flexDirection="column"
-      >
-  const textStile = {
-    fontSize: "100%",
-    fontFamily: "Noto Serif JP",
-    fontWeight: "800",
-  };
-  return (
-    <section id="Home">
-      <Box
-        display="flex"
-        flexDirection="column" // 縦に配置
-        justifyContent="center"
-        alignItems="center"
-        minHeight="90vh" // 画面の高さいっぱいまで要素を広げる
-        className="fadeIn"
-      >
-        <img src={Top_Title_Img} alt="画像の説明" style={{ width: "80%" }} />
-        <Box
-          style={textStile}
-          display="flex"
-          flexDirection="column" // 縦に配置
-          justifyContent="center"
-          alignItems="center"
-        >
-          <div>百花繚乱</div>
-          <div>～みんなの個性咲き誇れ～</div>
-        </Box>
-      </Box>
-    </section>
-  );
- */

@@ -28,8 +28,8 @@ const MenuItems = ["Home", "Live", "Message", "Theme song", "Access", "Links"];
 const Navbar: React.FC = () => {
   const CustomAppBar: React.CSSProperties = {
     position: "fixed",
-    background: "#FFFEF3",
-    boxShadow: "0px 2px 4px rgba(255, 206, 132, 1)", // 影の色を赤に変更
+    background: "#FFFFF2",
+    boxShadow: "0px 2px 4px #BAAF92", // 影の色を赤に変更
   };
 
   return (

@@ -14,7 +14,7 @@ const images = [image1, image2];
 // styled-componentsを使用して下線スタイルを定義
 const Message: React.FC = () => {
   const messagedByYokoyamaText = `
-                  みなさん、こんにちは！！！ 繚乱祭実行委員長の横山真人です。
+                  　みなさん、こんにちは！！！ 繚乱祭実行委員長の横山真人です。
                   今回の繚乱祭（文化祭）は、昨年度までには無かったショートムービーブロックや制作ブロック、またファションショーブロックやダンスブロックなどのステージパフォーマンスに特化したブロックなどがたくさんあります！
                   つまり、今までの大宮キャンパスの繚乱祭の中で最大規模となります！
                   今回のテーマは「百花繚乱 ～みんなの個性咲き誇れ～」！
@@ -25,7 +25,7 @@ const Message: React.FC = () => {
   return (
     <Page sectionId="Message">
       <NewH1>Message</NewH1>
-      <Grid container spacing={5}>
+      <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Box height="50%">
             <SlideInImage images={images} />

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ReactNode, useState } from "react";
-import { Grid, Drawer, IconButton } from "@mui/material";
+import { Box, Grid, Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import List from "./List";
@@ -58,7 +58,10 @@ const HamburgerMenu: React.FC<prop> = ({ IconItems, MenuItems }) => {
         {MenuItems.map((text, index) => (
           <AnchorLink
             href={`#${text}`}
-            style={{ textDecoration: "none", color: "#000000" }}
+            style={{
+              textDecoration: "none",
+              color: "#113946",
+            }}
             key={index}
           >
             <List buttonText={text} icon={IconItems[index]} key={index} />

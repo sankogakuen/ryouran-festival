@@ -3,9 +3,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
 import SlideInFadeInComponent from "./SlideInFadeInComponent";
 
-import image1 from "../static/img/msg/image1.png";
-import image2 from "../static/img/msg/image2.png";
-
 interface ImageSliderProps {
   images: string[]; // 表示したい画像のリスト
 }
