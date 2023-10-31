@@ -10,10 +10,11 @@ const SlideInFromRightComponent: React.FC<Props> = ({ children }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.6,
+    rootMargin: "0% 0% 100% 0%", // 要素の一番上がページの一番したに来たら要素がフェードインされはじめる
   });
 
   const variants = {
-    hidden: { x: 0, opacity: 0 }, // 右側に移動して非表示
+    hidden: { x: -100, opacity: 0 }, // 右側に移動して非表示
     visible: {
       x: 0,
       opacity: 1,

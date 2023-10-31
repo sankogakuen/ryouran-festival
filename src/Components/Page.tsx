@@ -15,19 +15,13 @@ const Page: React.FC<props> = ({ children, sectionId }) => {
         justifyContent="center"
         maxWidth={"80%"}
         margin="0 auto" // 左右のマージンを自動調整して中央配置
+        marginTop={"10%"}
+        marginBottom={"10%"}
       >
         <Box>{children}</Box>
       </Box>
     </section>
   );
 };
-
-/*
-
-      <div style={containerStyle}>
-        <Toolbar />
-        <div style={item}></div>
-      </div>
- */
 
 export default Page;

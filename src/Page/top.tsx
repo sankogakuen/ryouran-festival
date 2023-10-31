@@ -39,16 +39,20 @@ const ImageBlock: React.FC = () => {
 const DateBlock: React.FC = () => {
   const textStile = {
     fontFamily: "Noto Serif JP",
+    fontWeight: "400",
   };
-  const dateStile = {
-    fontSize: "100%",
-    fontFamily: "Noto Serif JP",
-    fontWeight: "800",
+  const link: React.CSSProperties = {
+    position: "relative",
+    content: '""',
+    left: "100", // 右端から線を出現させる
+    top: -0,
+    height: 3,
+    backgroundColor: "#808079",
+    width: "100%",
   };
   return (
     <Grid item xs={12}>
       <Grid
-        style={dateStile}
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -61,34 +65,38 @@ const DateBlock: React.FC = () => {
           justifyContent="center"
           width="80%"
         >
-          <Grid item xs={12}>
-            <h3 style={{ margin: "5px 0" }}>2023</h3>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid container spacing={2}>
-              <Grid item>
-                <StyledTypography variant="h1" style={textStile}>
-                  11/26
-                </StyledTypography>
-              </Grid>
-              <Grid item>
-                <StyledTypography style={textStile}>sun</StyledTypography>
+          <Box width="50%">
+            <Grid item xs={12}>
+              <StyledTypography margin="5px 0" variant="h3" style={textStile}>
+                2023
+              </StyledTypography>
+            </Grid>
+            <Grid item xs={12}>
+              <Grid container spacing={2}>
+                <Grid item>
+                  <StyledTypography style={textStile}>11/26</StyledTypography>
+                </Grid>
+                <Grid item>
+                  <StyledTypography style={textStile}>sun</StyledTypography>
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item xs={12} maxWidth={"80%"}>
-            <AiOutlineCaretDown />
-          </Grid>
-          <Grid item xs={12}>
-            <Grid container spacing={2}>
-              <Grid item>
-                <StyledTypography style={textStile}>11/27</StyledTypography>
-              </Grid>
-              <Grid item>
-                <StyledTypography style={textStile}>mon</StyledTypography>
+            <div style={link}></div>
+            <Grid item xs={12} maxWidth={"80%"}>
+              <AiOutlineCaretDown />
+            </Grid>
+            <Grid item xs={12}>
+              <Grid container spacing={2}>
+                <Grid item>
+                  <StyledTypography style={textStile}>11/27</StyledTypography>
+                </Grid>
+                <Grid item>
+                  <StyledTypography style={textStile}>mon</StyledTypography>
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
+            <div style={link}></div>
+          </Box>
         </Box>
       </Grid>
     </Grid>

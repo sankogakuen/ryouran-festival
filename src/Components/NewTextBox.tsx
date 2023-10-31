@@ -1,10 +1,11 @@
-import * as React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import { Typography, Collapse } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import SlideInFadeInComponent from "./SlideInFadeInComponent";
 
 import { AiFillCaretRight, AiFillCaretUp } from "react-icons/ai";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
   msgText: string;
@@ -19,6 +20,18 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
     setIsCollapsed(!isCollapsed);
   };
 
+  const elementRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToBottom = () => {
+    if (elementRef.current) {
+      const elementBottom =
+        elementRef.current.offsetTop + elementRef.current.offsetHeight;
+      window.scrollTo({
+        top: elementBottom,
+        behavior: "smooth",
+      });
+    }
+  };
   const formattedText = msgText.split("\n").map((line, index) => (
     <span key={index}>
       {line}
@@ -38,6 +51,7 @@ const NewTextBox: React.FC<Props> = ({ msgText, children }) => {
         textAlign: "justify",
         hyphens: "auto",
       }}
+      ref={elementRef}
     >
       <Typography variant="body1" style={textStile}>
         {formattedText}

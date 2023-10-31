@@ -63,6 +63,7 @@ const HamburgerMenu: React.FC<prop> = ({ IconItems, MenuItems }) => {
               color: "#113946",
             }}
             key={index}
+            offset={100}
           >
             <List buttonText={text} icon={IconItems[index]} key={index} />
           </AnchorLink>
