@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import Live from "./live";
 import Message from "./message";
@@ -10,6 +11,20 @@ import StateOfLastYear from "./stateoflastyear";
 import Date from "./date";
 
 const Home: React.FC = () => {
+  //
+  const [firstImageVisible, setFirstImageVisible] = useState(true);
+  const [secondImageVisible, setSecondImageVisible] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFirstImageVisible(false);
+      setSecondImageVisible(true);
+    }, 3000); // 3秒後に切り替え
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+  //
   return (
     <>
       <Navbar />

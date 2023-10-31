@@ -28,7 +28,8 @@ const live: React.FC = () => {
   const textStile = {
     color: "#113946",
     fontSize: "100%",
-    fontFamily: "M PLUS Rounded 1c",
+    fontFamily: "Zen Kaku Gothic New",
+    fontWeight: "800",
   };
   return (
     <Page sectionId="Live">

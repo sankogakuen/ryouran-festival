@@ -20,8 +20,8 @@ const StateOfLastYear: React.FC = () => {
 `;
   const textStile = {
     fontSize: "100%",
-    fontFamily: "M PLUS Rounded 1c",
-    fontWeight: "500",
+    fontFamily: "Zen Kaku Gothic New",
+    fontWeight: "800",
   };
 
   return (

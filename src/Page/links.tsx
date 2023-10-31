@@ -17,7 +17,7 @@ import {
 const links: React.FC = () => {
   return (
     <Page sectionId={"Links"}>
-      <Box height={"90vh"}>
+      <Box height={"90vh"} width={"80vw"}>
         <NewH1>Links</NewH1>
 
         <Grid container spacing={2}>
