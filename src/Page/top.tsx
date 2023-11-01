@@ -81,7 +81,6 @@ const DateBlock: React.FC = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <div style={link}></div>
             <Grid item xs={12} maxWidth={"80%"}>
               <AiOutlineCaretDown />
             </Grid>
@@ -95,7 +94,6 @@ const DateBlock: React.FC = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <div style={link}></div>
           </Box>
         </Box>
       </Grid>
