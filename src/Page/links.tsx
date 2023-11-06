@@ -21,9 +21,9 @@ const links: React.FC = () => {
       <Box height={"90vh"} width={"80vw"}>
         <NewH1>Links</NewH1>
 
-        <SlideInFadeInComponent>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={4}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={4}>
+            <SlideInFadeInComponent>
               <BodyCard
                 title="学校公式HP"
                 avatar={<AiOutlineGlobal />}
@@ -31,8 +31,10 @@ const links: React.FC = () => {
                 text="飛鳥未来きずな高校大宮CP公式HP"
                 popUpUrl="https://www.sanko.ac.jp/asuka-kizuna/omiya/"
               />
-            </Grid>
-            <Grid item xs={12} sm={4}>
+            </SlideInFadeInComponent>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <SlideInFadeInComponent>
               <BodyCard
                 title="Instagram"
                 avatar={<AiOutlineInstagram />}
@@ -40,8 +42,10 @@ const links: React.FC = () => {
                 text="大宮CP公式インスタグラム"
                 popUpUrl="https://www.instagram.com/omiya.asukamiraikizuna/"
               />
-            </Grid>
-            <Grid item xs={12} sm={4}>
+            </SlideInFadeInComponent>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <SlideInFadeInComponent>
               <BodyCard
                 title="Twitter / X"
                 avatar={<AiFillTwitterSquare />}
@@ -49,9 +53,9 @@ const links: React.FC = () => {
                 text="大宮CP公式Twitter(X)"
                 popUpUrl="https://twitter.com/kizunaomiya"
               />
-            </Grid>
+            </SlideInFadeInComponent>
           </Grid>
-        </SlideInFadeInComponent>
+        </Grid>
       </Box>
     </Page>
   );
