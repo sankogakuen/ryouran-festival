@@ -12,19 +12,27 @@ import image4 from "../static/img/Live/image4.png";
 
 const images = [image1, image2, image3, image4];
 
-const live: React.FC = () => {
-  const liveTimeTable = `
-日時：11月27日（月）13:00から15:30
-内容：ファッションショー・ダンス・ショートムービー・kahoot大会など
-(こちらの画像は去年に開催したライブの様子です)
-`;
-  const formattedText = liveTimeTable.split("\n").map((line, index) => (
+const formattedText = (str: String) => {
+  const formattedText = str.split("\n").map((line, index) => (
     <span key={index}>
       {line}
-      {index !== liveTimeTable.split("\n").length - 1 && <br />}{" "}
+      {index !== str.split("\n").length - 1 && <br />}{" "}
     </span>
   ));
 
+  return formattedText;
+};
+
+const live: React.FC = () => {
+  const liveTimeTable = `
+日時：11/27（月）13:00 ~ 16:00
+・「ダンス」「ファッションショー」「ショートムービー」ブロックによる発表
+・「軽音」「ダンス」「e-sports」同好会による発表
+・文化祭1日目の模擬店ブロック発表の表彰
+観覧の申し込みは`;
+  const liveTimeTable2 = `から（先着70組までとさせていただきます）。
+中学校3年生一名につき保護者の方一名までご入場いただけます。
+`;
   const textStile = {
     color: "#113946",
     fontSize: "100%",
@@ -41,7 +49,11 @@ const live: React.FC = () => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} style={textStile}>
-          <div style={textStile}>{formattedText}</div>
+          {formattedText(liveTimeTable)}
+          <a href="https://docs.google.com/forms/d/18tuY7R3bTg0z4oVLzkwEm4bN0sUuO0y1NluuveLmeAU/viewform?edit_requested=true">
+            こちら
+          </a>
+          {formattedText(liveTimeTable2)}
         </Grid>
       </Grid>
     </Page>

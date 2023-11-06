@@ -28,6 +28,13 @@ code {
   animation-fill-mode: forwards; /* アニメーションの開始と終了時の状態を指定 forwards→元の状態に戻らずアニメーション最後の状態を維持 */
 }
 
+.textStile {
+  color: #113946;
+  font-size: 100%;
+  font-family: "Zen Kaku Gothic New";
+  font-weight: 800;
+}
+
 /* フェードインアニメーション */
 @keyframes fadeIn {
   0% {
