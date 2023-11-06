@@ -10,7 +10,7 @@ const SlideInFromRightComponent: React.FC<Props> = ({ children }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.6,
-    rootMargin: "0% 0% 6% 0%", // 要素の一番上がページの一番したに来たら要素がフェードインされはじめる
+    rootMargin: "0% 0% 0% 0%", // 要素の一番上がページの一番したに来たら要素がフェードインされはじめる
   });
 
   const variants = {
