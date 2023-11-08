@@ -10,8 +10,10 @@ import image1 from "../static/img/StateOfLastYear/image2.png";
 import image2 from "../static/img/StateOfLastYear/image1.png";
 import image4 from "../static/img/StateOfLastYear/image4.png";
 import image5 from "../static/img/StateOfLastYear/image5.png";
+import image6 from "../static/img/StateOfLastYear/image6.png";
+import image7 from "../static/img/StateOfLastYear/image7.png";
 
-const images = [image1, image2, image4, image5];
+const images = [image1, image2, image4, image5, image6, image7];
 
 // styled-componentsを使用して下線スタイルを定義
 const StateOfLastYear: React.FC = () => {
